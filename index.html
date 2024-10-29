@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Birthday!</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; background-color: #ffebcd; }
+        h1 { color: #ff6347; }
+        .message { display: none; color: #4682b4; }
+        button { padding: 10px 20px; font-size: 16px; margin-top: 20px; }
+    </style>    
+</head>
+<body>
+    <h1>Happy Birthday, Love!</h1>
+    <p>Click the button for a special message!</p>
+    <button onclick="revealMessage()">Reveal Message</button>
+    <p class="message" id="birthdayMessage">You're the best thing that ever happened to me! 🥰</p>
+    <script>
+        function revealMessage() {
+            document.getElementById("birthdayMessage").style.display = "block";
+        }
+    </script>    
+</body>
+</html>
