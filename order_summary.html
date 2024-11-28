@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Order Summary</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffffff; /* White background */
+            font-family: 'IBM Plex Mono', monospace;
+            color: #000000;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .order-container {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .item-ordered {
+            font-weight: 700;
+            margin-top: 20px;
+        }
+
+        .gift {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .gift img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .gift-details h2 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .gift-details p {
+            color: #6c757d;
+            margin: 5px 0;
+            font-weight: 400;
+        }
+
+        .transaction-details {
+            margin-top: 30px;
+        }
+
+        .transaction-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .transaction-item span:last-child {
+            font-weight: 700;
+        }
+
+        .transaction-item .discount {
+            color: red;
+        }
+
+        .transaction-item .total-price {
+            color: green;
+        }
+
+        .details {
+            margin-top: 20px;
+            line-height: 1.5;
+        }
+
+        .confirm-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #004b84; /* Dark blue button color */
+            color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            text-transform: lowercase;
+            cursor: pointer;
+            margin-top: 30px;
+        }
+
+        .confirm-button:hover {
+            background-color: #003366;
+        }
+
+        .screenshot-message {
+            color: #6c757d;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="order-container">
+        <h1>Your Order</h1>
+
+        <div class="item-ordered">Item Ordered</div>
+        <div class="gift">
+            <img src="IMG_1218_Original.jpg" alt="Iana">
+            <div class="gift-details">
+                <h2>Iana</h2>
+                <p>Free for Kenji</p>
+                <p class="package">Whole Package</p>
+            </div>
+        </div>
+
+        <div class="transaction-details">
+            <h2>Details Transaction</h2>
+            <div class="transaction-item">
+                <span>Iana</span><span>$50,000,000</span>
+            </div>
+            <div class="transaction-item">
+                <span>Iana's plane tickets</span><span>$500</span>
+            </div>
+            <div class="transaction-item">
+                <span>Please Please video</span><span>$1,000</span>
+            </div>
+            <div class="transaction-item">
+                <span>Discount for Kenji</span><span class="discount">-$50,001,500</span>
+            </div>
+            <div class="transaction-item">
+                <span>Total Price</span><span class="total-price">$0</span>
+            </div>
+        </div>
+
+        <div class="details">
+            <h2>Detail:</h2>
+            <div id="summaryDetails"></div>
+        </div>
+
+        <h2>Deliver to:</h2>
+        <p>Sakuramoto Kenji</p>
+
+        <p class="screenshot-message">Take a screenshot and send to Iana</p>
+
+        <button class="confirm-button" onclick="confirmOrder()">confirm</button>
+    </div>
+
+    <script>
+        // Function to load saved data and display on summary page
+        function loadSummaryDetails() {
+            const meal = localStorage.getItem('mealPreference') || "(Meal not specified)";
+            const time = localStorage.getItem('selectedTime') || "(Time not specified)";
+            const food = localStorage.getItem('selectedFood') || "(Food not specified)";
+            const location = localStorage.getItem('selectedLocation') || "(Location not specified)";
+            
+            // Display the gathered information in the summary section
+            document.getElementById('summaryDetails').innerHTML = `
+                <div>Extra Service: ${meal}</div>
+                <div>What to do: ${time}</div>
+                <div>Iana's outfits: ${food}</div>
+                <div>Where to meet: ${location}</div>
+            `;
+        }
+
+        // Load the data on page load
+        window.onload = loadSummaryDetails;
+
+        function confirmOrder() {
+            // Redirect to the order confirmation page
+            window.location.href = 'orderconfirmed.html';
+        }
+    </script>
+</body>
+</html>
+

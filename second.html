@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Kenji!</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #004b84; /* Dark blue background */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'IBM Plex Mono', monospace;
+            color: #ffffff; /* White text color */
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .button {
+            margin-top: 50px;
+            padding: 15px 30px;
+            background-color: #df608f; /* Pink button color */
+            color: #ffffff; /* White text color for button */
+            border: none;
+            border-radius: 10px;
+            font-size: 1em;
+            text-transform: capitalize;
+            cursor: pointer;
+            font-family: 'Andale Mono', monospace; /* Set button font to Andale Mono */
+        }
+
+        .button:hover {
+            background-color: #ffa5c6; /* Lighter pink on hover */
+        }
+    </style>
+</head>
+<body>
+    <p>Happy birthday!</p>
+    <p>Wow! you still look 18.</p>
+    <p>You're literally like a wizard: magical and forever young.</p>
+    <p>Princess Iana will give you a birthday present. You can choose whatever you want.</p>
+    <button class="button" onclick="getPresent()">Get your birthday present</button>
+
+    <script>
+        function getPresent() {
+            // Redirect to the next surprise page
+            window.location.href = 'third.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenji's Birthday Gifts</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #004b84; /* Dark blue background */
+            color: #000000; /* Black text color */
+            font-family: 'IBM Plex Mono', monospace;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .content {
+            width: 100%;
+            max-width: 600px;
+            background-color: #ffffff; /* White background for content */
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        .header {
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-weight: 700;
+            font-size: 1.8em;
+        }
+
+        .header p {
+            color: #6c757d; /* Grey color for subtext */
+            margin: 5px 0;
+            font-weight: 400;
+        }
+
+        .gifts {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .gift {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .gift img {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .gift-details {
+            text-align: left;
+        }
+
+        .gift-details h2 {
+            font-size: 1.2em;
+            margin: 0;
+        }
+
+        .gift-details p {
+            color: #6c757d; /* Grey color for free label */
+            font-size: 0.9em;
+            margin: 5px 0 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="header">
+            <h1>Kenji's birthday</h1>
+            <p>What do you want for your birthday?</p>
+        </div>
+
+        <div class="gifts">
+            <!-- Gift 1 (Flowers - not available) -->
+            <div class="gift" onclick="window.location.href='not_available.html';">
+                <img src="assfrog.jpeg" alt="Nudes">
+                <div class="gift-details">
+                    <h2>Nudes</h2>
+                    <p>$150</p>
+                </div>
+            </div>
+
+            <!-- Gift 2 (Iana - available) -->
+            <div class="gift" onclick="window.location.href='date_confirmation.html';">
+                <img src="IMG_1218_Original.jpg" alt="Iana">
+                <div class="gift-details">
+                    <h2>Iana</h2>
+                    <p>Free for Kenji</p>
+                </div>
+            </div>
+
+            <!-- Gift 3 (Trip to North Pole - not available) -->
+            <div class="gift" onclick="window.location.href='not_available.html';">
+                <img src="northpole.jpg" alt="Trip to North Pole">
+                <div class="gift-details">
+                    <h2>Trip to North Pole</h2>
+                    <p>Sold out</p>
+                </div>
+            </div>
+
+            <!-- Gift 4 (Birthday Cake - not available) -->
+            <div class="gift" onclick="window.location.href='not_available.html';">
+                <img src="underwear.webp" alt="Underwear">
+                <div class="gift-details">
+                    <h2>Iana's Used Underwear</h2>
+                    <p>$50</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

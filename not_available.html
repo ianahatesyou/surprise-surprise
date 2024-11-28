@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Not Available</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #004b84; /* Dark blue background */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'IBM Plex Mono', monospace;
+            color: #df608f; /* Pink text color */
+            text-align: center;
+        }
+
+        .message-container {
+            background-color: #ffffff; /* White background for message */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 80%;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .button {
+            margin-top: 50px;
+            padding: 15px 30px;
+            background-color: #df608f; /* Pink button color */
+            color: #ffffff; /* White text color for button */
+            border: none;
+            border-radius: 10px;
+            font-size: 1em;
+            text-transform: capitalize;
+            cursor: pointer;
+            font-family: 'Andale Mono', monospace;
+        }
+
+        .button:hover {
+            background-color: #ffa5c6; /* Lighter pink on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="message-container">
+        <p>Oop! The item is no longer available.</p>
+    </div>
+    <button class="button" onclick="goBack()">Pick something else</button>
+
+    <script>
+        function goBack() {
+            // Redirect back to the third page to pick another gift
+            window.location.href = 'third.html';
+        }
+    </script>
+</body>
+</html>

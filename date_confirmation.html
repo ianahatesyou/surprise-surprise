@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date with Iana - Select Time</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #004b84; /* Dark blue background */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'IBM Plex Mono', monospace;
+            color: #000000; /* Black text color */
+            text-align: center;
+        }
+
+        .message-container {
+            background-color: #ffffff; /* White background for message */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 80%;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .input-container {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            width: 80%;
+            max-width: 300px;
+            text-align: center;
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        .button {
+            padding: 15px 30px;
+            font-size: 1em;
+            font-family: 'Andale Mono', monospace;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            color: #ffffff; /* White text color */
+            text-transform: capitalize;
+        }
+
+        .button-yes {
+            background-color: #79C9FA; /* Light blue color for YES button */
+        }
+
+        .button-yes:hover {
+            background-color: #5CAEDC; /* Darker blue on hover */
+        }
+
+        .button-alt-yes {
+            background-color: #df608f; /* Pinkish red background for alternate yes button */
+        }
+
+        .button-alt-yes:hover {
+            background-color: #e57373; /* Lighter pink on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="message-container">
+        <p>Do you want to go on a date with Iana?</p>
+    </div>
+    <div class="buttons">
+        <button class="button button-yes" onclick="goToDatePage()">YES</button>
+        <button class="button button-alt-yes" onclick="goToDatePage()">also yes but pink button</button>
+    </div>
+
+    <script>
+        function goToDatePage() {
+            // Redirect to the next page
+            window.location.href = 'lunchordinner.html';
+        }
+    </script>
+</body>
+</html>
+

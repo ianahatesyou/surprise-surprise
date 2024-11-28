@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunch or Dinner Selection</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #004b84; /* Dark blue background */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'IBM Plex Mono', monospace;
+            color: #000000; /* Black text color */
+            text-align: center;
+        }
+
+        .message-container {
+            background-color: #ffffff; /* White background for message */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 80%;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .buttons-container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .button {
+            padding: 15px 30px;
+            font-size: 1em;
+            font-family: 'Andale Mono', monospace;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            color: #ffffff; /* White text color */
+            text-transform: lowercase;
+            background-color: #df608f; /* Default button color */
+        }
+
+        .button:hover {
+            background-color: #e57373; /* Lighter pink on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="message-container">
+        <p>Do you want an extra service? ;)</p>
+    </div>
+    <div class="buttons-container">
+        <button class="button" onclick="selectOption('YES')">yes</button>
+        <button class="button" onclick="selectOption('NO')">No</button>
+    </div>
+
+    <script>
+        function selectOption(option) {
+            // Store the selected option in localStorage
+            localStorage.setItem('mealPreference', option);
+            // Redirect to the next page
+            window.location.href = 'specifictime.html';
+        }
+    </script>
+</body>
+</html>

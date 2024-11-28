@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - Enhanced Order Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #004b84;
+            color: #ffffff;
+            font-family: 'IBM Plex Mono', monospace;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .order-header-container, .order-updates-container {
+            max-width: 500px;
+            margin: 0 auto; /* Centers the whole container */
+        }
+
+        .order-header, .order-updates {
+            text-align: left; /* Align text to the left within the container */
+            margin-bottom: 20px;
+        }
+
+        .order-header h1 {
+            font-size: 1.5em;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .order-header p {
+            font-size: 2em;
+            margin: 5px 0;
+            font-weight: bold;
+        }
+
+        .order-updates {
+            background-color: #ffffff;
+            color: #004b84;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .order-updates h2 {
+            color: #df608f;
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .globe-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 20px auto;
+            border: 5px solid #ffffff; /* White frame around the globe */
+            border-radius: 50%;
+        }
+
+        .globe {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: url('285647_globe_icon.svg') no-repeat center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .plane {
+            position: absolute;
+            width: 50px;
+            top: 70%;
+            left: 10%;
+            transform: translate(-50%, -50%);
+            animation: flyToYou 10s linear infinite; /* Set to repeat infinitely */
+        }
+
+        .iana-label {
+            position: absolute;
+            top: 70%;
+            left: 10%;
+            transform: translate(-50%, -100%);
+            font-size: 1.2em;
+            color: #ffffff;
+            font-weight: bold;
+            animation: flyToYou 10s linear infinite; /* Same animation as the plane */
+        }
+
+        .you-label {
+            position: absolute;
+            top: 20%;
+            left: 80%;
+            transform: translate(-50%, -50%);
+            font-size: 1.2em;
+            color: #df608f;
+            font-weight: bold;
+        }
+
+        @keyframes flyToYou {
+            0% {
+                top: 70%;
+                left: 10%;
+            }
+            50% {
+                top: 30%;
+                left: 50%;
+            }
+            100% {
+                top: 20%;
+                left: 80%;
+            }
+        }
+
+        .order-details {
+            margin-top: 20px;
+            text-align: left;
+            max-width: 450px;
+            margin-left: auto; 
+            margin-right: auto; /* Center the order details horizontally */
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .order-details img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #df608f; /* Pink border around the image */
+        }
+
+        .order-details-text {
+            line-height: 1.2; /* Adjusted line-height for closer spacing */
+            color: #004b84;
+            margin-top: -15px; /* Moved list items closer to the title */
+        }
+
+        .order-details-title {
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 5px; /* Slightly reduced margin-bottom to tighten spacing */
+        }
+
+        .totals {
+            margin-top: 20px;
+            line-height: 1.6;
+            text-align: left;
+            max-width: 400px;
+            margin-left: auto; 
+            margin-right: auto; /* Center the totals horizontally */
+        }
+
+        .happy-birthday {
+            margin-top: 40px;
+            font-size: 2.5em;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .iana-message {
+            margin-top: 10px;
+            font-size: 1.5em;
+            text-align: center;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="order-header-container">
+        <div class="order-header">
+            <h1>Order #2911</h1>
+            <p>Thank You Kenji!</p>
+        </div>
+    </div>
+
+    <div class="order-updates-container">
+        <div class="order-updates">
+            <h2>Order Updates</h2>
+            <p>You will receive order and shipping updates via LINE.</p>
+        </div>
+    </div>
+
+    <div class="globe-container">
+        <div class="globe">
+            <img src="3512623_airplane_flight_plane_transportation_travel_icon.svg" class="plane" alt="Flying Plane">
+            <div class="iana-label">Iana</div>
+            <div class="you-label">YOU</div>
+        </div>
+    </div>
+
+    <div class="order-details">
+        <img src="IMG_1218_Original.jpg" alt="Iana">
+        <div class="order-details-text">
+            <div class="order-details-title">
+                <h3>Iana</h3>
+                <span>x1</span>
+            </div>
+            <ul style="margin-top: -10px;"> <!-- Adjusted to bring list closer to the title -->
+                <li>A date with Iana</li>
+                <li>Please Please video</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="totals">
+        <p>Subtotal: $0</p>
+        <p>Shipping: Free</p>
+        <p>Tax: $0</p>
+        <p>Total: $0</p>
+    </div>
+
+    <div class="happy-birthday">
+        <p>HAPPY BIRTHDAY!</p>
+    </div>
+
+    <div class="iana-message">
+        <p>Iana will see you soon.</p>
+    </div>
+
+</body>
+
+</html>
+

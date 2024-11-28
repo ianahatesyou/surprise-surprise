@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Kenji!</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #004b84; /* Dark blue background */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'IBM Plex Mono', monospace;
+            color: #ffffff; /* White text color */
+        }
+        
+        .icon {
+            font-size: 100px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .button {
+            margin-top: 50px;
+            padding: 15px 30px;
+            background-color: #df608f; /* Pink button color */
+            color: #ffffff; /* White text color for button */
+            border: none;
+            border-radius: 10px;
+            font-size: 1em;
+            text-transform: lowercase;
+            cursor: pointer;
+            font-family: 'Andale Mono', monospace; /* Set button font to Andale Mono */
+        }
+
+        .button:hover {
+            background-color: #ffa5c6; /* Lighter pink on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="icon">
+        🎂 <!-- Birthday cake emoji -->
+    </div>
+    <h1>HAPPY BIRTHDAY<br>KENJI!</h1>
+    <button class="button" onclick="nextPage()">continue</button>
+
+    <script>
+        function nextPage() {
+            // Redirect to the second page
+            window.location.href = 'second.html';
+        }
+    </script>    
+</body>
+</html>
